@@ -34,11 +34,6 @@ function openMessages() {
 }
 
 function closeMessages() {
-    helper("popupMessage1", 0);
-    helper("popupMessage2", 0);
-    helper("popupMessage3", 0);
-    helper("popupMessage4", 0);
-    helper("popupMessage5", 0);
     helper("mySidebar", 0);
     helper("appRow", 1);
     helper("subScreen", 0);
