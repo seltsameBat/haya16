@@ -1,0 +1,102 @@
+/* Original styles remain intact */
+body {
+	background: #EFD593;
+  }
+  
+  .grid__item {
+	height: calc(100vh - 40px);
+	min-height: 460px;
+	max-width: calc(100vw - 40px);
+	background: #EFD593;
+	margin: 20px;
+	padding: 100px 0;
+	position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  /* Mobile fixes */
+@media (max-width: 767px) {
+    /* Reduce font size and layout to fit everything */
+    html, body {
+        height: 100vh !important;
+        overflow: hidden !important;  /* Prevent scrolling */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important; /* Align everything at the top */
+        margin: 0 !important;
+        padding: 0 !important;
+        font-size: 0.9em !important; /* Reduce the base font size */
+    }
+
+    /* Navbar styling */
+    .navbar {
+        min-height: 35px !important;
+        padding: 5px !important;
+     
+    }
+
+    .navbar-brand {
+        padding: 5px !important;
+        font-size: 1.4em !important; /* Reduced font size */
+        
+        font-weight: bold !important;
+    }
+
+    /* Grid item adjustment for fitting in smaller screens */
+    .grid__item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        height: 25vh !important;  /* Smaller height */
+        padding: 5px 0 !important;
+        min-height: unset !important;
+        margin: 5px auto !important;
+    }
+
+    /* Rows adjusted */
+    .rows {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        justify-content: center !important;
+        height: 25vh !important; /* Smaller height */
+        padding: 5px !important;
+      
+    }
+
+    /* Button container */
+    .button-container {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin-top: 10px !important; /* Adjusted space above button */
+								
+    }
+
+    /* Larger buttons but not overwhelming */
+    .btn-lg {
+        max-width: 180px !important;  /* Reduced width */
+        padding: 12px !important; /* More compact padding */
+        font-size: 1.2em !important; /* Reduced font size */
+							
+    }
+
+    /* Adjust heading size */
+    h1 {
+        font-size: 1.8em !important;  /* Smaller heading */
+        margin: 8px 0 !important; /* Reduced margin */
+    }
+
+    /* Optional: Reduce the size of any icons, too */
+    .glyphicon-star {
+        font-size: 0.6em !important;
+        margin: 0 4px !important;
+    }
+}

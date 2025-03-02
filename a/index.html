@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>space</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
+
+    <!--buttonz-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!--apps-->
+    <link href="https://icons8.com/"></link>
+
+</head>
+
+<body>
+    <!--bottom taskbar-->
+
+
+    <!--APPZ-->
+    <section id="appRow">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3" style="text-align: center; padding: 50px;">
+
+            <div class="col" style="color: antiquewhite;">
+                <div>
+                    <img class="icon" onclick="openMessages()" style="margin-bottom: 10%;" src="img/blue.png" />
+
+                </div>
+                 Riddle Planet
+            </div>
+
+            <div class="col" id="secretIcon" style="color: antiquewhite; display: none;">
+                <div>
+                    <img class="icon" onclick="openSecretPage()" style="margin-bottom: 10%;" src="img/circle.png" />
+                </div>
+                Secret Planet
+            </div>
+
+            <div class="col" style="color: antiquewhite;">
+                <div>
+
+                    <img class="icon" onclick="openMusic()" style="margin-bottom: 10%;" src="img/pink.png" />
+
+
+                </div>
+                Music Planet
+            </div>
+
+           
+
+           
+        </div>
+    </section>
+
+    <!--Main content zone-->
+
+    <section id="subScreen" style="padding: 0% 2% 2% 2%;">
+        <div  id="secretPage" style="display: none; height: 85%; width: 90%; margin: 5%;">
+            <div class="row" style="background-color: #af242485;">
+                <div class="col col-8" style="color: white;">Detective Peraltastic</div> <!-- Fixed color style -->
+               <div class="button-container">
+                    <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToSecretPage2()"style="background: green;"></button>
+        
+                    <button class="close" aria-label="Close" type="button" onclick="closeSecretPage()" style="background: red;"></button>
+                 </div>
+            </div>
+                 <div class="txtbox">
+                        <p>
+                            Hey haya,<br><br>
+                            16!! even though I know you’re not a huge fan of all the birthday hype, today is still your day.<br><br>
+                            Life’s a total rollercoaster, isn’t it? Some days you’re like, “WOOO, I’m killing it!” and other days, you're just trying to make it through without losing your mind. But hey, it’s all part of the ride. The bad days? They don’t last. The good days? Well, they don’t last either, so enjoy them when you have them. It’s all part of this crazy thing called life. and you’ve got the strength to handle it all. Just keep moving forward like you're chasing the bad guys, minus the faceplants.<br><br>
+                            Listen, I’m proud of you. like, ridiculously proud. You’re 16, and I don’t know how you did it, but you’ve already made such a big difference in so many lives, including mine. You’re kind, smart, and you make life better just by being you. You make people feel seen, you make them feel better, and you make us laugh (even when you don’t try). The world needs more people like you seriously, no exaggeration. You’re a legend in the making.<br><br>
+                            Balance is everything. You don’t need to go from zero to hero in one day. Take it slow when you need to, but chase what makes you happy. Life’s about finding your rhythm. I know you’re doing your best, and that’s all you need to do. You’ve got this. I’ve seen you handle things like a pro. Keep doing you.<br><br>
+                             Here’s to another year of you being amazing. Go have the best day ever, whether it’s chill or totally wild.<br><br>
+                            With all my respect & hopeful energy,<br><br>
+                            <em>~ Jake Peralta</em>
+                        </p>
+                
+                    
+                </div>
+          
+        
+        
+        </div>
+
+        <div  id="secretPage2" style="display: none; height: 85%; width: 90%; margin: 5%;">
+            <div class="row" style="background-color: #aad89fbe">
+                <div class="col col-8" style="color: white;">"Dear Friend, I'm sorry I haven't written in a while, but I've been trying hard not to be a loser."</div> <!-- Fixed color style -->
+               <div class="button-container">
+                    <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToSecretPage()"style="background: rgb(125, 191, 221);"></button>
+                    <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToSecretPage3()"style="background: green;"></button>
+        
+                    <button class="close" aria-label="Close" type="button" onclick="closeSecretPage()" style="background: red;"></button>
+                 </div>
+            </div>
+                 <div class="txtbox">
+                        <p>
+                            Hi,<br><br>
+                            Happy Birthday. I’ve been thinking a lot about what to say, and I keep starting over because none of it feels quite right. But I think that’s because sometimes birthdays feel complicated. Sometimes they’re happy, and sometimes they’re just another day. I don’t know if you feel that way, but if you do, I get it. Either way, I’m glad today exists because it means you’re here. And I’m glad you’re here.<br><br>
+                            I was thinking about all the days that led up to this one, and how lucky I feel to have spent some of them with you. I don’t always say how much that means to me, but it does. You’re a good person. Even on the quiet days when not much happens. Even on the hard days when you don’t feel like yourself. I notice those things, and I notice you. I just thought you should know that.<br><br>
+                            Sometimes it feels like the world keeps moving, and you’re just stuck, watching it all happen without you. I don’t know if you ever feel that way, but I do. It’s hard, and it’s lonely, and sometimes it feels like no one notices. I don’t have the perfect words to make that go away, and I won’t pretend that I do. But maybe feeling lost isn’t something you fix with words. Maybe it’s just about having someone with you while you figure it out. If that’s true, then I’ll be here. No matter how long it takes. I won’t try to fix you or push you to feel better. I’ll just be here, until it’s over.<br><br>
+                            I think people like us feel things a little deeper, and maybe that’s why we get lost more easily. But I also think that’s why we notice things others don’t. Like the way the light looks in the evening, or how a song can make you feel safe, even if just for a moment. I think that’s special, and I think you’re special too. Even if you don’t always feel that way.<br><br>
+                            Happy Birthday. I hope today is gentle with you. I hope you feel seen. And I hope you know that, even when you feel lost, you’re not invisible.<br><br>
+                            always,<br><br>
+                            <em>~ Charlie Kelmeckis</em>
+                        </p>
+                
+                    
+                </div>
+ 
+        </div>
+
+        <div  id="secretPage3" style="display: none; height: 85%; width: 90%; margin: 5%;">
+            <div class="row" style="background-color: #eed4b1f1;">
+                <div class="col col-8" style="color: white;">Snoopster</div> <!-- Fixed color style -->
+               <div class="button-container">
+                    <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToSecretPage2()"style="background: rgb(125, 191, 221);"></button>
+                    <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToSecretPage4()"style="background: green;"></button>
+        
+                    <button class="close" aria-label="Close" type="button" onclick="closeSecretPage()" style="background: red;"></button>
+                 </div>
+            </div>
+                 <div class="txtbox">
+                        <p>
+                            Happy Birthday!<br><br>
+                            I hope you’re enjoying your day as much as I enjoy a good nap. Don’t worry, I’m keeping an eye on things from my doghouse. You deserve all the best, so eat, relax, and enjoy, because today’s all about you.<br><br>
+                            You know, I’ve learned that sometimes the best days are the ones when you don’t try too hard. Just let things happen, and enjoy the little moments along the way. Life’s better that way. Keep it simple.<br><br>
+ 
+                            Zzzz,<br><br>
+                            <em>~ Snoopy</em>
+                        </p>
+                
+                    
+                </div>
+ 
+        </div>
+
+        <div  id="secretPage4" style="display: none; height: 85%; width: 90%; margin: 5%;">
+            <div class="row" style="background-color: #0f25f0e3">
+                <div class="col col-8" style="color: white;">Spidey King</div> <!-- Fixed color style -->
+               <div class="button-container">
+                    <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToSecretPage3()"style="background: rgb(125, 191, 221);"></button>
+                    <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToSecretPage5()"style="background: green;"></button>
+                    <button class="close" aria-label="Close" type="button" onclick="closeSecretPage()" style="background: red;"></button>
+                 </div>
+            </div>
+                 <div class="txtbox">
+                        <p>
+                            Hey,<br><br>
+                            Let’s skip the part where I pretend to be good at heartfelt letters. (Last time I tried, I webbed the card to a pigeon. Long story.) But you? You’re the kind of person who makes hero work feel worth it. Not because you’ve got powers, hell, you don’t need ’em. But because you’ve got that stubborn light in you that refuses to quit. On people. On dreams. On fixing what’s broken.<br><br>
+                            Here’s the Spidey secret no one talks about, 90% of this job is just… doing it. Yeah, I know, discipline sounds like a fancy word for “suffering through stuff in disguise.” But that’s where the magic hides. Suiting up when I’d rather nap. Fixing my busted web-shooters again. Patrolling in the rain because “eh, someone’s gotta.” Sounds boring? Maybe. But boring’s what builds the days you’ll brag about later. You already know that, though. You’ve got your own version; showing up, grinding, being the person your people lean on. That’s not luck. That’s you. And it’s way harder than dodging Goblin gliders.<br><br>
+                            Happy Birthday, haya. Here’s your mission, should you choose to accept it; Do something today that’d make Past You proud. Even if it’s just ignoring your texts for 12 hours straight. Maybe it’s rewatching that movie you love but pretend you don’t. Or hell, maybe it’s just existing unapologetically, no explanations, no guilt, just you. And if anyone tries to harsh your vibe? Annoy them so creatively they’ll suspect you’ve been taking lessons from a certain web-head. (Spoiler: You don’t need ’em.) <br><br>
+                          
+                            keep swinging,<br><br>
+                           ~ Your Friendly Neighborhood Spidey<br><br>
+                           <em>P.S. If you need backup, just shout. (Or y’know, text. I’m modern like that.)</em>
+                        </p>
+                
+                    
+                </div>
+ 
+        </div>
+
+        <div  id="secretPage5" style="display: none; height: 85%; width: 90%; margin: 5%;">
+            <div class="row" style="background-color:#5924af85">
+                <div class="col col-8" style="color: white;">Alpha Sigma Lads Keeper</div> <!-- Fixed color style -->
+               <div class="button-container">
+                    <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToSecretPage4()"style="background: rgb(125, 191, 221);"></button>
+        
+                    <button class="close" aria-label="Close" type="button" onclick="closeSecretPage()" style="background: red;"></button>
+                 </div>
+            </div>
+                 <div class="txtbox">
+                        <p>
+                            Hi,<br><br>
+                            all that have been said before me covers most of whats been on my mind. happy birthday, haya! I hope 16 treats u right.<br><br>
+                            if I were to give you one more winning card, itd be this, always go to allah first. doesnt matter what has happened, what uve done, what ure feeling, or whats coming next. he's ur first move. after that, lean on ur people (im guessing theyre chatgpt) when u need it, & ure gonna crush wtv comes ur way. (im sorry if u already know this but it doesnt hurt to remind u especially cz its ramadan,).<br><br>
+                            if i end up sending this project (i doubt i would), js know that at last, i truly believe & am sure that some things are so worth it that feeling uncomfortable about them brings joy & feels like an achievement. you, haya are definitely one of those things (people). cant wait to see u grow into who ure meant to be, i js hope u see for urself how much uve accomplished, & i hope ure proud of urself. 16 is gonna be a whole new rollercoaster ride, so have fun & dont fear it. <br><br>
+                            happy birthday, u youthful sigma...<br><br>
+                            lots of strawberries & lemonade,<br><br>
+                            <em>~ Gothman Hero</em>
+                        </p>
+                
+                    
+                </div>
+ 
+        </div>
+
+    </section>
+
+<!-- SECRET PAGE (Initially Hidden) -->
+
+<!-- POP-UP IF FAILED -->
+<div id="failPopup" class="popup" style="display: none;">
+    <div class="row">
+        <div class="col col-8">Oops!</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('failPopup')"></button>
+        </div>
+    </div>
+    <div class="txtbox">
+        <p>❌ You didn’t answer correctly. Try again!</p>
+        <button class="button" type="button" onclick="resetQuiz()"style="background: rgb(182, 180, 75);">Retry</button>
+    </div>
+</div>
+
+<div id="successPopup" class="popup" style="display: none;">
+    <div class="row">
+        <div class="col col-8">AAYYYEE!!</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('successPopup')"></button>
+        </div>
+    </div>
+    <div class="txtbox">
+        <p>🎉 Congratulations! You unlocked the secret planet!? 🎉</p>
+
+    </div>
+</div>
+
+<div id="musicPopup" class="popup" style="display: none;">
+    <div class="row">
+        <div class="col col-8">HEYY!</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('musicPopup')"></button>
+        </div>
+    </div>
+    <div class="txtbox">
+        <p>its Ramadan so preferably listen to this after athan & when ure done w ur religious duties!🦖</p>
+
+    </div>
+</div>  
+
+
+*<!-- First Music Section -->*
+
+<div class="popupWindow popupApp" id="musicPage1" style="display: none; height: 85%;width: 90%; margin: 5%;">
+
+
+    <div class="row">
+
+        <div class="col col-8"><Play>2:30 a.m</Play></div>
+        
+        
+      
+        
+            <div class="button-container">
+                <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToMusicPage2()"style="background: green;"></button>
+
+                <button class="close" aria-label="Close" type="button" onclick="closeMusic()" style="background: red;"></button>
+             </div>
+        
+            
+
+    </div>
+
+<iframe id="musicIframe1" src="https://open.spotify.com/embed/playlist/4YcI6woyA3anTyjj4jq6TV?utm_source=generator"
+
+width="100%" height="96%" frameBorder="0" allowtransparency="true" allow="encrypted-media">
+
+</iframe>
+
+</div>
+
+*<!-- Second Music Section (Hidden Initially) -->*
+<div class="popupWindow popupApp" id="musicPage2" style="display: none; height: 85%;width: 90%; margin: 5%;">
+
+
+    <div class="row">
+
+        <div class="col col-8"><Play>Quiet nights</Play></div>
+        
+        
+    
+        
+            <div class="button-container">
+                <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToMusicPage1()"style="background: rgb(0, 140, 255);"></button>
+                <button class="arrow-btn" id="nextBtn" type="button" onclick="switchToMusicPage3()"style="background: green;"></button>
+                <button class="close" aria-label="Close" type="button" onclick="closeMusic()" style="background: red;"></button>
+             </div>
+        
+            
+        </div>
+  
+
+<iframe id="musicIframe1" src="https://open.spotify.com/embed/playlist/2HeJCTboHIY2UH2sGNtDeR?utm_source=generator" 
+width="100%" height="96%" frameBorder="0" allowtransparency="true" allow="encrypted-media">
+
+</iframe>
+
+</div>
+
+
+
+<div class="popupWindow popupApp" id="musicPage3" style="display: none; height: 85%;width: 90%; margin: 5%;">
+
+
+    <div class="row">
+
+        <div class="col col-8"><Play>R&B</Play></div>
+        
+        
+    
+        
+            <div class="button-container">
+                <button class="arrow-btn" id="prevBtn" type="button" onclick="switchToMusicPage2()"style="background: rgb(0, 140, 255);"></button>
+                
+                <button class="close" aria-label="Close" type="button" onclick="closeMusic()" style="background: red;"></button>
+             </div>
+        
+            
+        </div>
+  
+
+<iframe id="musicIframe1" src="https://open.spotify.com/embed/playlist/78P3wCs3vGqooYXFZlhSLf?utm_source=generator&theme=0" 
+width="100%" height="96%" frameBorder="0" allowtransparency="true" allow="encrypted-media">
+
+</iframe>
+
+</div>
+    <!--main menu sry lol havent changed the names properly-->
+    <div id="mySidebar" class="sidebar" style="display: none;">
+        <div class="row" style="background-color: #a8b082;">
+            <div class="col col-8" style="margin-left: 5px; color: rgb(230, 230, 230);">Q&A (Riddles)</div>
+            <div class="col">
+                <button class="close" aria-label="Close" type="button" onclick="closeMessages()" style="background: red;"></button>
+            </div>
+        </div>
+
+        <div class="txtbx" style="text-align: center; overflow-y: auto;">
+            <div class="d-grid gap-2" style="margin: 10px;" id="popupMessages">
+
+                <!--notif MESSAGE-->
+<!-- Example Question -->
+<div class="popupMessage" id="popupMessage1">
+    <div class="row">
+        <div class="col col-8">Riddle 1</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('popupMessage1')"></button>
+        </div>
+    </div>
+    <div class="pptxtbox">
+        <p>I’m always coming, never truly arrive. A shift you feel but can’t describe. I am both feared and wanted, inevitable and unpredictable. There’s no escaping me, no matter how hard you try.</p>
+        <div class="row">
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage1', 'Death')">Death</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage1', 'Chaos')">Chaos</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage1', 'Change')">Change</button> </div>
+        </div>
+    </div>
+</div>
+
+<!-- Another Example Question -->
+<div class="popupMessage" id="popupMessage2">
+    <div class="row">
+        <div class="col col-8">Riddle 2</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('popupMessage2')"></button>
+        </div>
+    </div>
+    <div class="pptxtbox">
+        <p>I speak without words, yet tell all you feel, A voice in the air, with no need to conceal. Shaped by your hands, but carrying no weight, I fill the room and guide your state.</p>
+        <div class="row">
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage2', 'Echo')">Echo</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage2', 'Music')">Music</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage2', 'Wind')">Wind</button> </div>
+        </div>
+    </div>
+</div>
+
+<div class="popupMessage" id="popupMessage3">
+    <div class="row">
+        <div class="col col-8">Riddle 3</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('popupMessage3')"></button>
+        </div>
+    </div>
+    <div class="pptxtbox">
+        <p>I exist in the spaces between moments. I change when you look but really just stay the same. Fading over time, however never fully gone.</p>
+        <div class="row">
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage3', 'Shadow')">Shadow</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage3', 'Memory')">Memory</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage3', 'Dream')">Dream</button> </div>
+        </div>
+    </div>
+</div>
+
+<div class="popupMessage" id="popupMessage4">
+    <div class="row">
+        <div class="col col-8">Riddle 4</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('popupMessage4')"></button>
+        </div>
+    </div>
+    <div class="pptxtbox">
+        <p>It flows in silence, carving the unseen. Always moving, never resting. It leaves no trace but shifts all it touches.</p>
+        <div class="row">
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage4', 'Time')">Time</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage4', 'Water')">Water</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage4', 'Thoughts')">Thoughts</button> </div>
+        </div>
+    </div>
+</div>
+
+<div class="popupMessage" id="popupMessage5">
+    <div class="row">
+        <div class="col col-8">Riddle 5</div>
+        <div class="col">
+            <button class="close" aria-label="Close" type="button" onclick="closePopUp('popupMessage5')"></button>
+        </div>
+    </div>
+    <div class="pptxtbox">
+        <p>who is appreciated all year long?(trick question)</p>
+        <div class="row">
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage5', ' Jamal abed al-nasir')">Jamal abed al-nasir</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage5', 'Super-market guy')">Super-market guy</button> </div>
+            <div class="col"> <button class="button" onclick="checkAnswer('popupMessage5','Haya hamadneh')">Haya hamadneh</button> </div>
+        </div>
+    </div>
+</div>
+<div id="completionMessage" style="display: none; color: green; font-weight: bold; margin-top: 20px;">
+    🎉 You answered all the questions! Check out the Secret Planet! 🎉
+</div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<!--notif MESSAGE
+                <div class="popupMessage" id="popupMessage5">
+                    <div class="row">
+                        <div class="col col-8">Message(4)</div>
+                        <div class="col">
+                            <button class="close" aria-label="Close" type="button" href="https://youtu.be/dQw4w9WgXcQ" onclick="closePopUp('popupMessage5')" style="background: red;"></button>
+                        </div>
+                    </div>
+                    <div class="pptxtbox">
+                        <p>never gonna</p>
+
+                        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2" style="margin: 2px 2px;">
+                            <div class="col" style="text-align: right;"> <button class="button" type="button" style="width: 100%;" onclick="surprise()">giv u up</button> </div>
+                            <div class="col" style="text-align: left;"> <button class="button" type="button" style="width: 100%;" onclick="surprise()">let u down</button> </div>
+                        </div>
+                    </div>
+                </div>
+     notif MESSAGE-->

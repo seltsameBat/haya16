@@ -1,0 +1,503 @@
+nav {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    color: #3d3d5c;
+}
+
+body {
+    background-image: url('img/sky.GIF');
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-color: #9999e6;
+    font-size: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.button {
+    background-color: #424e3d; /* Rich red for buttons */
+    color: #F5E6CC;
+    border: 2px solid #293126;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #585c43;
+    color: #fff;
+    border-color: #585c43;
+    transform: scale(1.05);
+}
+
+
+.popup {
+    background-color: #bb99ff;
+    padding: 5px 2px 0px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-style: double;
+    border-color: #3d3d5c;
+    border-width: 5px;
+    text-align: left;
+}
+
+
+.popupWindow {
+    background-color: #a0877d;
+    padding: 5px 2px 0px 5px;
+    margin: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-style: double;
+    border-color: #3d3d5c;
+    border-width: 5px;
+    text-align: left;
+}
+
+.popupWindow.popupFolder {
+    margin: 5%;
+}
+
+
+#musicApp {
+    font-family: 'Press Start 2P', cursive;
+    color: #101013;
+}
+
+#subScreen {
+    margin: 1.5rem;
+}
+
+.txtbox {
+    background-color: #faf3c0; /* Slightly darker yellow */
+    border: 3px solid #5f5f3f;
+    padding: 20px;
+    font-family: 'Dancing Script', cursive;
+
+    text-align: left;
+    width: 100%;
+    max-width:750px;
+    margin: auto;
+    line-height: 1.3;
+    color: #c5c5c5; /* Dark, but not too harsh */
+    font-size: 1.2rem;
+    letter-spacing: 0.01px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.popupMessage {
+    background-color: #825C2E; /* Dark gray-black background */
+    border-color: #424e3d;
+    color: #fff; /* White text for contrast */
+    padding: 5px 2px 0px 5px;
+    margin: 0px 25px 50px 25px;
+    border-style: double;
+    
+    border-width: 5px;
+    text-align: left;
+    display: block;
+}
+
+.pptxtbox {
+    background-color: #a8b082; /* Deep brown for text box */
+    color: #f1e9d9;
+    border-color: #424e3d;
+    padding: 10px;
+    margin: 5px 5px 5px 0px;
+    border-style: solid;
+
+    text-align: center;
+}
+
+
+
+/* Ensure music popups scroll properly */
+.popupWindow.popupApp {
+    overflow-y: auto !important;
+    max-height: 85vh;
+}
+
+/* Fix Spotify iframe height */
+.popupWindow iframe {
+    width: 100%;
+    height: 90vh; /* Show more songs */
+}
+
+
+
+/* A container to keep buttons next to each other */
+/* Ensure button container is aligned properly */
+.button-container {
+    display: flex;
+    align-items: center; /* Aligns buttons vertically */
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 5px; /* Adds small space between buttons */
+    position: relative;
+}
+
+/* Adjust arrow buttons to align properly */
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* Ensure arrow icon is centered properly */
+.arrow-btn::before {
+    content: "\e080"; /* Glyphicon-chevron-right */
+    font-family: 'Glyphicons Halflings';
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure Close button has the same alignment */
+
+
+/* Adjust buttons inside secret pages */
+#secretPage .button-container, 
+#secretPage2 .button-container,#secretPage3 .button-container, 
+#secretPage4 .button-container, #secretPage5 .button-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Ensure all buttons are at the right */
+}
+
+
+/* Make close and arrow buttons look the same */
+.close, .arrow-btn {
+    width: 20px;
+    height: 20px;
+   
+    opacity: 0.6;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+/* When hovering, make them a bit brighter */
+.close:hover, .arrow-btn:hover {
+    opacity: 1;
+}
+
+/* Close button (draws an "X" using hidden lines) */
+.close::before,
+.close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 15px;
+    background-color: white;
+}
+
+.close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Next and Previous buttons (draw arrows instead of an "X") */
+#prevBtn::before, #nextBtn::before {
+    content: "\e079"; /* Glyphicon-chevron-left */
+    font-family: 'Glyphicons Halflings';
+    color: white;
+    font-size: 12px;
+    
+}
+
+#nextBtn::before {
+    content: "\e080"; /* Glyphicon-chevron-right */
+    font-family: 'Glyphicons Halflings';
+    color: white;
+    font-size: 12px;
+}
+
+
+.sidebar {
+    height: 85%;
+    width: 90%;
+    margin: 5%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color:#424e3d;
+    border-style: double;
+    border-color: #825C2E;
+    border-width: 5px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    font-family: 'Cinzel', serif; /* Elegant vintage font */
+}
+
+   
+.sidebar .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.message-header {
+    background-color: #825C2E;
+    color: #eee6d9;
+    overflow: hidden;
+    position: fixed;
+    padding: 0%;
+    margin: 0%;
+    z-index: 99999;
+    width: 100%;
+}
+
+.sidebar {
+    padding-top: 0%;
+}
+
+.folder-text {
+    font-size: 0.7rem;
+}
+
+.menuButton {
+    color: #3d3d5c;
+}
+
+
+
+
+.menuButton {
+    height: 75px;
+    background-color: #9a9add;
+    opacity: 1;
+}
+
+.menuButton:hover {
+    background-color: #9a9add;
+    border: 2px dotted #4747d1;
+}
+
+
+
+    /* Secret Page Styling */
+#secretPage, #secretPage2,#secretPage3, #secretPage4, #secretPage5{
+    background-color: #fdf6d1; /* A yellowish old paper color */
+    border: 5px dashed #5f5f3f; /* Rotten-looking dashed border */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: #4A3F35;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+    position: relative;
+    overflow: hidden;
+
+    height: 85%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto !important;
+    max-height: 85vh;
+    width: 90%;
+   
+}
+
+/* Add aged paper texture */
+#secretPage::before, #secretPage2::before,#secretPage3::before, #secretPage4::before, #secretPage5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/old-map.png'); /* A grunge texture for the background */
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Retro title for the secret page */
+#secretPage .row ,#secretPage2 .row ,#secretPage3 .row ,#secretPage4 .row ,#secretPage5 .row {
+    background-color: #5f5f3f; /* Dark brown background for the title area */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/* Letter styling - apply a "wrinkled" effect to the text */
+.txtbox p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow for aging effect */
+    word-wrap: break-word;
+}
+
+    #secretIcon {
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    #secretIcon:hover {
+        opacity: 0.7;
+    }
+
+#failPopup, #successPopup, #musicPopup {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    background-color: #ffcccc;
+    text-align: center;
+    border: 5px double #3d3d5c;
+    padding: 20px;
+    z-index: 9999; 
+}
+#musicPopup {
+   
+    background-color: #d85454;
+    
+    border: 5px double #5c3d3d;
+ 
+}
+
+.sidebar .row .col-8 ,.popupWindow .row .col-8 {
+    font-size: 2rem; 
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    overflow-wrap: break-word; 
+    line-height: 1.2; /* Tightens spacing if needed */
+}
+#appRow {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Absolute positioning to prevent rearrangement */
+
+/* Messages (Top Left) */
+#appRow .col:nth-child(1) { 
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: translate(0, 0); 
+}
+
+/* Secret (Bottom Center) */
+#appRow .col:nth-child(2) {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Music (Top Right) */
+#appRow .col:nth-child(3) {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    transform: translate(0, 0);
+}
+
+/* Icon Sizes with Clamp for Responsiveness */
+#appRow .icon {
+    width: clamp(50px, 8vw, 80px);
+    height: clamp(50px, 8vw, 80px);
+    transition: transform 0.3s ease;
+}
+
+#appRow .icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 767px)  {
+    #appRow .col:nth-child(1) {
+        top: 3%;
+        left: 3%;
+    }
+
+    #appRow .col:nth-child(2) {
+        bottom: 50%;
+        left: 50%;
+    }
+
+    #appRow .col:nth-child(3) {
+        top: 3%;
+        right: 3%;
+    }
+
+    #appRow .icon {
+        width: clamp(40px, 12vw, 60px);
+        height: clamp(40px, 12vw, 60px);
+    }
+
+    .popupWindow.popupApp {
+        max-height: 90vh;
+    }
+  .popupWindow {
+    overflow-y: auto !important;
+    max-height: 90vh;
+}
+  
+    .popupWindow iframe {
+    width: 100%;
+    height: 100%; /* Allow full scrolling */
+}
+
+
+.row .col-8 {
+    font-size: 1.5rem; /* Adjusts font size on smaller screens */
+    width: 100%;
+}
+#secretPage, #secretPage2,#secretPage3, #secretPage4, #secretPage5{
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+}
+}
+
+
+
+

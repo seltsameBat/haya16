@@ -1,0 +1,186 @@
+#collage hr{
+    border:none;
+    border-top:2px solid #f5f2f2;
+    height:1px;
+}
+
+#collage #playPanel {
+    background-color:#A57D66;
+    padding:10px 0px;
+    margin: 10px auto;
+    max-width:800px;
+    width:95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+   
+}
+
+#collage #actualImageBox {
+    display: inline-block;
+    font-size:0.8em;
+    margin: 10px 10px;
+    vertical-align: centre;
+    width:280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    box-sizing: border-box;
+    border:2px solid rgb(0, 0, 0);
+}
+
+#collage #stepBox, #collage #timeBox {
+    display:inline-block;
+    width:48%;
+}
+
+#collage #stepBox div {
+   
+    display:inline-block;
+    padding:1px 4px;
+    margin: 0px auto;
+   
+}
+
+#collage img#actualImage{
+    border:2px solid rgb(0, 0, 0);
+    height:280px;
+    width:280px;
+}
+
+#collage #sortable {
+    border:2px solid rgb(0, 0, 0);
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    width: 400px;
+    touch-action: none; /* Prevent scroll while dragging */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight */
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+#collage #sortable li {
+    background-size: 400% 400%; 
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: calc(100% / var(--grid-size, 3)); 
+    height: calc(100% / var(--grid-size, 3));
+   
+    }
+#collage button  {
+    background-color:#85614c;
+    border:1px solid rgb(0, 0, 0);
+    display: inline;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    min-height: 48px; /* Minimum touch target size */
+    padding: 12px 24px !important;
+    margin: 8px 0;
+}
+body, html {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Added these mobile rules at bottom */
+@media (max-width: 768px) {
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100svh; /* Minimum height to fit screen */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    box-sizing: border-box;
+}
+
+#collage {
+    width: 100vw;
+    min-height: 100svh;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#collage #playPanel {
+    width: 95vw;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+#collage #sortable {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size, 3), 1fr);
+    grid-template-rows: repeat(var(--grid-size, 3), 1fr);
+    gap: 2px;
+    width: 100%;
+    max-width: 95vw;
+    box-sizing: border-box;
+}
+
+#collage #sortable li {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+#collage img#actualImage {
+    width: 90vw;
+    max-width: 250px;
+    height: auto;
+    box-sizing: border-box;
+}
+    #collage button {
+        min-height: 48px;
+        padding: 15px 25px !important;
+        background-color:#6e6d6d;
+        border:1px solid rgb(0, 0, 0);
+        display: inline;
+        font-size: 14px;
+        height: auto;
+        width: auto;
+        margin: 8px 0;
+        color: black;
+    }
+
+    #actualImageBox {
+        width: 95% !important;
+        margin: 10px auto !important;
+        display: inline-block;
+        font-size:0.8em;
+        margin: 10px 10px;
+        vertical-align: centre;
+    }
+
+    #collage #actualImageBox {
+        display: block;
+        font-size: 0.8em;
+        margin: 10px auto; 
+        text-align: center; 
+        width: 250px; 
+    }
+
+  
+}
